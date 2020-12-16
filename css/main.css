@@ -186,6 +186,13 @@ h3 {
     margin-top: 20px;
     display: inline-block;
     transition: all .3s ease;
+    border: 2px solid #fe4918;
+}
+
+.button.hollow,
+.button.hollow:hover {
+    background-color: white;
+    color: #fe4918;
 }
 
 ul {
@@ -611,6 +618,80 @@ p.numero {
     font-size: 4em;
     display: block;
     margin: 0 0 10px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/** Tablas de Precios **/
+
+ul.lista-precios>li {
+    padding: 10px;
+}
+
+@media only screen and (min-width:768px) {
+    ul.lista-precios>li {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+div.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
+    transition: all .3s ease;
+}
+
+div.tabla-precio ul li {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+}
+
+div.tabla-precio ul li:before {
+    /* Codigo obligatorio para el Font Awesome */
+    font-family: 'Font Awesome 5 Free';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    content: '\f00c';
+    /* Codigo del proyecto */
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: #008000;
+}
+
+div.tabla-precio h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+div.tabla-precio p.numero {
+    color: #000000;
+    margin: 20px 0;
+}
+
+
+/** Mapa **/
+
+div.mapa {
+    height: 420px;
+    background-color: green;
 }
 
 
