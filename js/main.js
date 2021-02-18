@@ -1,8 +1,21 @@
 (function() {
     'use strict';
 
+
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function() {
+
+        var map = L.map('mapa').setView([20.674693, -103.387442], 17);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([20.674693, -103.387442]).addTo(map)
+            .bindPopup('GDLWebCamp 2020.<br> Boletos ya disponibles.')
+            .openPopup();
+
+
         //Campos datos usuario
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido')
@@ -142,3 +155,21 @@
 
     }); //DOM CONTENT LOADED
 })();
+
+$(function() {
+
+    //Programa de conferencias
+    $('.programa-evento .info-curso:first').show();
+    $('.menu-programa a:first').addClass('activo');
+
+    $('.menu-programa a').on('click', function() {
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+        $('.ocultar').hide();
+
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+
+        return false;
+    });
+});
