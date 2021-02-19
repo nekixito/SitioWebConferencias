@@ -179,7 +179,22 @@ $(function() {
                 'margin-top': '0px'
             });
         }
+    });
 
+    //Arreglar menú
+    /*
+    $(window).resize(function() {
+        var windowWidth = $(".barra").width();
+        if (windowWidth > 755) {
+            $(".navegacion-principal").css({ display: "block" });
+        } else {
+            $(".navegacion-principal").css({ display: "none" });
+        }
+    });
+    */
+    //Menú responsive
+    $('.menu-movil').on('click', function() {
+        $('.navegacion-principal').slideToggle();
     });
 
     //Programa de conferencias
